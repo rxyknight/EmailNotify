@@ -14,9 +14,7 @@ import com.roy.model.Order;
 
 @Service
 public class SimpleOrderManager implements OrderManager {
-	{
-		System.out.println("SimpleOrderManager Created");
-	}
+
 	@Resource
 	private MailSender mailSender;
 	@Resource
@@ -33,8 +31,6 @@ public class SimpleOrderManager implements OrderManager {
     public void placeOrder(Order order) {
     	System.out.println("placeOrder method invoked");
     	JavaMailSenderImpl mailSenderImpl = (JavaMailSenderImpl)mailSender;
-    	System.out.println(mailSenderImpl.getJavaMailProperties().getProperty("mail.smtp.socketFactory.class"));
-    	System.out.println(mailSenderImpl.getJavaMailProperties().getProperty("mail.smtp.timeout"));
         // Do the business calculations...
 
         // Call the collaborators to persist the order...

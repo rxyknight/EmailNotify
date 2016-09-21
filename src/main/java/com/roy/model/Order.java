@@ -6,10 +6,7 @@ public class Order {
 	private long orderNumber;
 	private String customerName;
 	private String emailAddress;
-	
-	{
-		System.out.println("Order Created");
-	}
+
 	
 	public long getOrderNumber() {
 		return orderNumber;
